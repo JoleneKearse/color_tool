@@ -1,21 +1,8 @@
-const convertRGBtoHex = (r, g, b) => {
-    // convert rgb to 3 pairs for hex convention
-    let pair1 = r.toString(16);
-    let pair2 = g.toString(16);
-    let pair3 = b.toString(16);
-    // convert to array to analyze 1 by 1
-    let pairArr = [pair1, pair2, pair3];
-    let newPairArr = "";
-    // loop over pairs to check if only 1 digit 
-    for (let i = 0; i < pairArr.length; i++) {
-      if (pairArr[i].length === 1) {
-        pairArr[i] = "0" + pairArr[i];
-      }
-      newPairArr += pairArr[i];
-      return newPairArr;
-    }
-    const rgb = pair1 + pair2 + pair3;
-    return rgb;
-  }
-  
-  console.log(convertRGBtoHex(50, 10, 40));
+const pairToHex = (color) => {
+  let pair  = color.toString(16);
+  return pair.length === 1 ? "0" + pair : pair;
+}
+
+const convertRGBToHex = (r, g, b) => {
+  return "#" + pairToHex(r) + pairToHex(g) + pairToHex(b);
+} 
