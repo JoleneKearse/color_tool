@@ -97,7 +97,7 @@ slider.addEventListener("input", () => {
     // get the altered hex 
     alteredHex = alterColor(hexInput.value, sliderValue);
     alteredColor.style.backgroundColor = alteredHex;
-    alteredColorText.innerText = `${alteredHex}`;
+    alteredColorText.innerText = `${alteredHex.toUpperCase()}`;
     alteredColorText.style.color = alteredHex;
 });
 
@@ -133,6 +133,5 @@ const reset = () => {
 };
 
 copyBtn.addEventListener("click", async () => {
-    await navigator.clipboard.writeText(alteredHex);
-    alert(`Hex code ${alteredHex} was copied to your clipboard`)
+    await navigator.clipboard.writeText(alteredHex.toUpperCase());
 });
