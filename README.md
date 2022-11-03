@@ -28,4 +28,4 @@ My take on Scrimba's Color Tool: [Build a color tool in vanilla JavaScript](http
 
 ![Screenshot showing lighten colour, darken colour, and accessibility features](change_the_luminosity.gif).
 
-Go to the [Live Site](https://jolenekearse.github.io/color_tool/)
+Go to the [Live Site](https://colour-tool.vercel.app/)
